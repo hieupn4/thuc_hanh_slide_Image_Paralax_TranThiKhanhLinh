@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .paralax_cover
+            {
+                width:754px;
+                height: 360px;
+                overflow: hidden;
+                background: #99ff33;
+                position: relative;
+                margin: auto;
+                padding: 0px;
+            }
+            .paralax_cover_ul
+            {
+                padding: 0px;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                list-style: none;
+                transition : left ease-in 0.8s;
+                width: 300%;
+            }
+            .paralax_cover_ul>li,.paralax_cover_ul>li>img
+            {
+                display: inline-block;
+            }
+           input#anh1:checked ~ ul.paralax_cover_ul
+           {
+               left: 0%;
+           }
+           input#anh2:checked ~ ul.paralax_cover_ul 
+            {  
+             left:-100%;                 
+            }
+           input#anh3:checked ~ ul.paralax_cover_ul
+           {  
+             left:-200%;
+           }
+        </style>
+    </head>
+    <body>
+        <div class="paralax_cover">            
+                <input type="radio" name="anhslide" id="anh1" class="paralax_cover_radio">
+                <label for="anh1" > </label>
+                <input type="radio" name="anhslide" id="anh2" class="paralax_cover_radio">
+                <label for="anh2"></label>
+                <input type="radio" name="anhslide" id="anh3" class="paralax_cover_radio">
+                <label for="anh3"></label>            
+            <ul class="paralax_cover_ul">
+                <li><img src="image/image1.png" alt="anh1"></li>
+                <li><img src="image/image2.png" alt="anh2"></li>
+                <li><img src="image/image3.png" alt="anh3"></li>
+            </ul>
+        </div>
+    </body>
+</html>
